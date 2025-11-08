@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Productos</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="producto.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Maestro de Productos</h1>
+    <form class="product-form">
+      
+      <label for="name">Nombre del producto</label>
+      <input type="text" id="name" name="name" class="form-control" required>
+
+      <label for="description">Descripción</label>
+      <textarea id="description" name="description" class="form-control" rows="4" required></textarea>
+
+      <label for="price">Precio</label>
+      <input type="number" id="price" class="form-control" name="price" step="0.01" min="0" required>
+
+      <label for="stock">Cantidad en stock</label>
+      <input type="number" id="stock" class="form-control" name="stock" min="0" required>
+
+      <label for="category">Categoría</label>
+      <select id="category" name="category" class="form-select" required>
+        <option value="">Seleccionar...</option>
+        <option value="electronica">Electrónica</option>
+        <option value="ropa">Ropa</option>
+        <option value="hogar">Hogar</option>
+        <option value="otros">Otros</option>
+      </select>
+
+      <label for="image">URL de la imagen</label>
+      <input type="url" id="image" name="image" class="form-control" placeholder="https://ejemplo.com/imagen.jpg">
+
+      <button type="submit">Guardar Producto</button>
+    </form>
+  </div>
+</body>
+</html>
